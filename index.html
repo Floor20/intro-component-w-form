@@ -24,18 +24,49 @@
         <div class="description-col">
           <div class="description-content">
             <h1>Learn to code by watching others</h1>
-            <p>See how experienced developers solve problems in real-time. Watching
-            scripted tutorials is great, but understanding how developers think is
-            invaluable.</p>
+            <p>
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
           </div>
         </div>
         <div class="form-col">
-          <div class="ribbon"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
+          <div class="ribbon">
+            <span>Try it free 7 days</span> then $20/mo. thereafter
+          </div>
           <div class="form-area">
             <form>
-              <input type="text" placeholder="First Name"></input><br><input type="text" placeholder="Last Name"></input><br> <input type="text" placeholder="Email Address"></input><br> <input type="text" placeholder="Password"></input><br> <button type="submit">Claim your free trial</button>
+              <div class="input-area">
+                <input type="text" id="first-name" placeholder="First Name" />
+                <img src="images/icon-error.svg" class="err-img" />
+                <p class="err-message">First name cannot be empty</p>
+              </div>
+
+              <div class="input-area">
+                <input type="text" id="last-name" placeholder="Last Name" />
+                <img src="images/icon-error.svg" class="err-img" />
+                <p class="err-message">Last name cannot be empty</p>
+              </div>
+
+              <div class="input-area">
+                <input type="text" id="email" placeholder="Email Address" />
+                <img src="images/icon-error.svg" class="err-img" />
+                <p class="err-message">Email address cannot be empty</p>
+              </div>
+
+              <div class="input-area">
+                <input type="text" id="password" placeholder="Password" />
+                <img src="images/icon-error.svg" class="err-img" />
+                <p class="err-message">Password cannot be empty</p>
+              </div>
+
+              <button type="submit">Claim your free trial</button>
             </form>
-            <p class="disclaimer">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+            <p class="disclaimer">
+              By clicking the button, you are agreeing to our
+              <span>Terms and Services</span>
+            </p>
           </div>
         </div>
       </div>
