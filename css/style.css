@@ -87,28 +87,7 @@ form {
   position: relative;
 }
 
-#first-name,
-#last-name,
-#email,
-#password {
-  border: 2px solid hsl(0, 100%, 74%);
-  border-radius: 8px;
-}
-
-.err-img {
-  position: absolute;
-  top: 12px;
-  right: 30px;
-}
-
-.err-message {
-  color: hsl(0, 100%, 74%);
-  font-size: 10px;
-  margin-bottom: 15px;
-  text-align: right;
-}
-
-input[type="text"],
+input,
 button {
   font-family: Poppins, sans-serif;
   width: 100%;
@@ -139,4 +118,27 @@ button:hover {
 
 .disclaimer span {
   color: hsl(2, 80%, 41%);
+}
+
+/* -------- JS BEHAVIOR ----------------------- */
+
+.hidden {
+  display: none;
+}
+
+.err-border {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+
+.err-img {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+}
+
+.err-message {
+  color: hsl(0, 100%, 74%);
+  font-size: 10px;
+  margin-bottom: 15px;
+  text-align: right;
 }

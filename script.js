@@ -1,45 +1,47 @@
 "use strict";
 
-const firstName = document.getElementById("first-name");
-const lastName = document.getElementById("last-name");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const errImg = document.getElementsByTagName("img");
-const inputParent = document.querySelectorAll(".input-area");
-const inputChild = document.querySelectorAll(".err-message");
+const firstName = document.querySelector(".first-name");
+const lastName = document.querySelector(".last-name");
+const email = document.querySelector(".email");
+const password = document.querySelector(".password");
+const errImg = document.querySelectorAll(".err-img");
+const inputFields = document.querySelectorAll(".field");
+const errMessages = document.querySelectorAll(".err-message");
 const form = document.querySelector("form");
 
-const inputList = [...inputParent];
+const [firstNameErr, lastNameErr, emailErr, passwordErr] = [...errMessages];
+const [firstNameImg, lastNameImg, emailImg, passwordImg] = [...errImg];
+const [firstNameBox, lastNameBox, emailBox, passwordBox] = [...inputFields];
 
-const init = function () {
-  inputList.forEach((area) => {
-    console.log(area);
-  });
+console.log(errImg);
+
+const showError = function (el, msg, img) {
+  el.classList.add("err-border");
+  msg.classList.remove("hidden");
+  img.classList.remove("hidden");
 };
-
-init();
 
 form.addEventListener("submit", (e) => {
   let messages = [];
+  e.preventDefault();
 
   if (firstName.value === "" || firstName.value == null) {
-    messages.push("First name is required");
+    showError(firstName, firstNameErr, firstNameImg);
   }
 
   if (lastName.value === "" || lastName.value == null) {
-    messages.push("Last name is required");
+    showError(lastName, lastNameErr, lastNameImg);
   }
 
   if (email.value === "" || email.value == null) {
-    messages.push("Email address is required");
+    showError(email, emailErr, emailImg);
   }
 
   if (password.value === "" || password.value == null) {
-    messages.push("Password is required");
+    showError(password, passwordErr, passwordImg);
   }
 
   if (messages.length > 0) {
-    e.preventDefault();
     console.log(messages);
   }
 });
