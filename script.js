@@ -1,19 +1,16 @@
 "use strict";
 
+const form = document.querySelector("form");
 const firstName = document.querySelector(".first-name");
 const lastName = document.querySelector(".last-name");
 const email = document.querySelector(".email");
 const password = document.querySelector(".password");
 const errImg = document.querySelectorAll(".err-img");
-const inputFields = document.querySelectorAll(".field");
 const errMessages = document.querySelectorAll(".err-message");
-const form = document.querySelector("form");
+const emailFormatErr = document.querySelector(".email-err-message");
 
 const [firstNameErr, lastNameErr, emailErr, passwordErr] = [...errMessages];
 const [firstNameImg, lastNameImg, emailImg, passwordImg] = [...errImg];
-const [firstNameBox, lastNameBox, emailBox, passwordBox] = [...inputFields];
-
-console.log(errImg);
 
 const showError = function (el, msg, img) {
   el.classList.add("err-border");
@@ -22,26 +19,21 @@ const showError = function (el, msg, img) {
 };
 
 form.addEventListener("submit", (e) => {
-  let messages = [];
   e.preventDefault();
 
-  if (firstName.value === "" || firstName.value == null) {
+  if (firstName.value === "" || firstName.value == null)
     showError(firstName, firstNameErr, firstNameImg);
-  }
 
-  if (lastName.value === "" || lastName.value == null) {
+  if (lastName.value === "" || lastName.value == null)
     showError(lastName, lastNameErr, lastNameImg);
-  }
 
-  if (email.value === "" || email.value == null) {
+  if (email.value === "" || email.value == null)
     showError(email, emailErr, emailImg);
-  }
+  else if (email.value.charAt(email.value.length - 4) !== ".")
+    showError(email, emailFormatErr, emailImg);
 
-  if (password.value === "" || password.value == null) {
+  if (password.value === "" || password.value == null)
     showError(password, passwordErr, passwordImg);
-  }
-
-  if (messages.length > 0) {
-    console.log(messages);
-  }
 });
+
+//else if email.value.charAt(email.value.length - 4) !== '.'

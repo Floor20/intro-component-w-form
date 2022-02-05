@@ -136,9 +136,14 @@ button:hover {
   right: 30px;
 }
 
-.err-message {
+.err-message,
+.email-err-message {
   color: hsl(0, 100%, 74%);
   font-size: 10px;
   margin-bottom: 15px;
   text-align: right;
+}
+
+.email-err-message {
+  margin-bottom: 10px;
 }
