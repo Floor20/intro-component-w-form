@@ -38,5 +38,3 @@ form.addEventListener("submit", (e) => {
   if (password.value === "" || password.value == null)
     showError(password, passwordErr, passwordImg);
 });
-
-//else if email.value.charAt(email.value.length - 4) !== '.'
