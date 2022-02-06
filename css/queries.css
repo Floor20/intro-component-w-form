@@ -1,9 +1,3 @@
-@media only screen and (max-width: 740px) {
-  .landing-content {
-    /* column-gap: 10%; */
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .landing-content {
     flex-direction: column;
