@@ -29,7 +29,10 @@ form.addEventListener("submit", (e) => {
 
   if (email.value === "" || email.value == null)
     showError(email, emailErr, emailImg);
-  else if (email.value.charAt(email.value.length - 4) !== ".")
+  else if (
+    email.value !== "" ||
+    (email.value !== null && email.value.charAt(email.value.length - 4) !== ".")
+  )
     showError(email, emailFormatErr, emailImg);
 
   if (password.value === "" || password.value == null)
