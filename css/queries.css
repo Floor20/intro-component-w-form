@@ -28,7 +28,7 @@
   }
 
   .ribbon {
-    padding: 5px;
+    padding: 8px;
   }
 
   .form-area {
@@ -37,11 +37,11 @@
 
   input,
   button {
-    padding: 5px;
+    padding: 8px;
   }
 
   .err-img {
-    top: 5px;
+    top: 8px;
     right: 25px;
   }
 
